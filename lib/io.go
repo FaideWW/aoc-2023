@@ -16,3 +16,7 @@ func ReadInputFile(filename string) string {
 	check(err)
 	return strings.TrimSpace(string(dat))
 }
+
+func TrimAndSplit(input string) []string {
+	return strings.Split(strings.ReplaceAll(strings.TrimSpace(input), "\r\n", "\n"), "\n")
+}
